@@ -1,7 +1,7 @@
 # Python Object-Oriented Programming
-
 class Employee:
     company_name = "tcs"
+
     def __init__(self,First_name, Last_name, pay):
         self.First_name = First_name
         self.Last_name = Last_name
@@ -11,6 +11,11 @@ class Employee:
     def full_details(self,no_number):
         return f"employee name: {self.First_name} {self.Last_name}\nsalary: {self.pay}\ncontact no: {no_number}\nemail_id: {self.Email}\n"
 
+    def is_available(self,status):
+        if status is False:
+            return f"{self.First_name} {self.Last_name} is not available "
+        else:
+            return f"{self.First_name} {self.Last_name} is available"
 
 
 emp1 = Employee("taraka","satya",50000)
@@ -31,3 +36,4 @@ print(emp3.full_details(9666428769))
 #
 # print(Employee.lastname)
 # print(Employee.email)
+print(emp1.is_available(True))
